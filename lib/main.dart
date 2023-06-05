@@ -1,3 +1,5 @@
+import 'package:app_catalogo/config/models/category.dart';
+import 'package:app_catalogo/presentation/screens/list_products.dart';
 import 'package:flutter/material.dart';
 
 import 'config/theme/app_theme.dart';
@@ -10,17 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'App Catalogo',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 6).theme(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('App Catalogo'),
-        ),
-        body: Center(
-          child: FilledButton.tonal(
-              onPressed: () {},
-              child: const Text('Click me')),
-        ),
-      ),
+      theme: AppTheme(selectedColor: 4).theme(),
+      home: ListProductsScreen(category: categories[0],),
     );
   }
 }
